@@ -17,7 +17,10 @@
           <a href="#hero">🚀 Acne Rocket</a>
         </h1>
         <button id="hamburger-button" class="text-2xl md:hidden cursor-pointer">
-          &#9776;
+          <!-- &#9776; -->
+          <div
+            class="w-6 h-1 bg-white rounded-sm absolute right-4 transition-all duration-500 before:w-6 before:h-1 before:bg-white before:rounded-sm before:right-0 before:top-2 before:absolute before:transition-all before:duration-500 after:w-6 after:h-1 after:bg-white after:rounded-sm after:right-0 after:-top-2 after:absolute after:transition-all after:duration-500"
+          ></div>
         </button>
         <nav class="hidden md:block flex-1" aria-label="main">
           <ul class="flex justify-around">
@@ -35,9 +38,9 @@
       </section>
       <section
         id="mobile-menu"
-        class="absolute min-h-screen w-full top-0 hidden animate-open-menu origin-top bg-slate-100 dark:bg-black"
+        class="absolute section-min-height w-full top-[72px] hidden animate-open-menu origin-top bg-slate-100 dark:bg-black transition-all duration-500"
       >
-        <button class="absolute top-4 right-4 text-4xl">&times;</button>
+        <button class="absolute -top-14 right-4 text-4xl"></button>
         <nav
           class="absolute top-20 left-1/2 -translate-x-1/2 text-4xl flex flex-col gap-10"
         >

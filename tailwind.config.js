@@ -13,15 +13,9 @@ module.exports = {
           "70%": { transform: "scaleY(1.2)" },
           "100%": { transform: "scaleY(1)" },
         },
-        "close-menu": {
-          "0%": { transform: "scaleY(1)" },
-          "30%": { transform: "scale(1.2)" },
-          "100%": { transform: "scale(0)" },
-        },
       },
       animation: {
         "open-menu": "open-menu 0.75s ease-in-out forwards",
-        "close-menu": "close-menu 0.75s ease-in-out forwards",
       },
     },
   },
