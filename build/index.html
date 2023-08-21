@@ -8,7 +8,7 @@
   </head>
   <body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
     <header
-      class="bg-teal-700 flex items-center justify-center sticky top-0 z-10 text-white"
+      class="bg-teal-700 flex items-center justify-center sticky top-0 z-10 text-white transition-all duration-500"
     >
       <section
         class="max-w-4xl mx-auto p-4 flex items-center justify-between flex-1"
@@ -16,11 +16,10 @@
         <h1 class="text-4xl flex-1 font-bold">
           <a href="#hero">🚀 Acne Rocket</a>
         </h1>
-        <button class="text-2xl sm:hidden focus:outline-none">&#9776;</button>
-        <nav
-          class="hidden sm:block flex-1 flex justify-center"
-          aria-label="main "
-        >
+        <button id="hamburger-button" class="text-2xl md:hidden cursor-pointer">
+          &#9776;
+        </button>
+        <nav class="hidden md:block flex-1" aria-label="main">
           <ul class="flex justify-around">
             <li>
               <a class="hover:opacity-70" href="#rockets">Our Rockets</a>
@@ -34,11 +33,26 @@
           </ul>
         </nav>
       </section>
+      <section
+        id="mobile-menu"
+        class="absolute min-h-screen w-full top-0 hidden animate-open-menu origin-top bg-slate-100 dark:bg-black"
+      >
+        <button class="absolute top-4 right-4 text-4xl">&times;</button>
+        <nav
+          class="absolute top-20 left-1/2 -translate-x-1/2 text-4xl flex flex-col gap-10"
+        >
+          <a href="#hero" class="text-center">Home</a>
+          <a href="#rockets" class="text-center">Our Rockets</a>
+          <a href="#testinomials" class="text-center">Testinomials</a>
+          <a href="#contact" class="text-center">Contact Us</a>
+          <a href="#footer" class="text-center">Legal</a>
+        </nav>
+      </section>
     </header>
     <main class="max-w-4xl mx-auto">
       <section
         id="hero"
-        class="flex flex-col-reverse p-10 sm:flex-row gap-5 justify-center items-center mb-12 scroll-mt-20"
+        class="flex flex-col-reverse p-10 sm:flex-row gap-5 justify-center items-center mb-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
       >
         <article class="sm:w-1/2">
           <h2
@@ -70,7 +84,10 @@
       </section>
       <hr class="mx-auto bg-black dark:bg-white w-1/2" />
 
-      <section id="rockets" class="p-6 my-12 scroll-mt-20">
+      <section
+        id="rockets"
+        class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
+      >
         <h2
           class="text-4xl text-center font-bold sm:text-5xl text-slate-900 dark:text-white mb-6"
         >
@@ -114,7 +131,10 @@
 
       <hr class="mx-auto bg-black dark:bg-white w-1/2" />
 
-      <section id="testinomials" class="p-6 my-12 scroll-mt-20">
+      <section
+        id="testinomials"
+        class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
+      >
         <h2
           class="text-4xl text-center font-bold sm:text-5xl text-slate-900 dark:text-white mb-6"
         >
@@ -171,7 +191,10 @@
 
       <hr class="mx-auto bg-black dark:bg-white w-1/2" />
 
-      <section id="contact" class="p-6 my-12 scroll-mt-20">
+      <section
+        id="contact"
+        class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height"
+      >
         <h2
           class="text-4xl text-center font-bold sm:text-5xl text-slate-900 dark:text-white mb-6"
         >
@@ -224,5 +247,7 @@
         </div>
       </section>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

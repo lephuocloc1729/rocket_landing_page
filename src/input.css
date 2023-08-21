@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .section-min-height {
+    min-height: calc(100vh - 72px);
+  }
+}
 @layer components {
   .card {
     @apply flex flex-col items-center justify-center border-2 dark:border-slate-500 rounded-2xl p-2 dark:hover:border-white border-black hover:border-slate-400 w-3/4 sm:w-full shadow-2xl;
